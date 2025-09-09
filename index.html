@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaFinalProject</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/1e4cf527a0.js" crossorigin="anonymous"></script>
+    <script src="index.js"defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav__content">
+                <img class="logo" src="./co2.jpg"></img>
+                <div class="links">
+                    <a href="" class="home__link">Home</a>
+                    <a href="" class="home__link">Find your Movie here</a>
+                    <a class="contact--btn">Contact</a>
+                </div>
+            </div>
+        </div>
+   </header>
+   <section class="landing__page">
+    <div class="content__wrapper">
+            <div class="section__title animation__text">Colorado's best movie search platform!</div>
+            <h1 class="section__description animation__text">Find your favorite movie with <span class="red">Colorado</span> movies</h1>
+        <div class="search__wrapper">
+            <div class="search__info">
+                <input type="text" class="search__info--input" placeholder="Title, Genres"onchange="searchChange(event)">
+                    <button class="search__info--btn">Start search</button>
+            </div>
+        </div>
+        <div class="search__results--wrapper">
+            <span class="black-txt">Search Results for:</span>
+            <span class="searchName"></span>
+            <div class="price--filter">
+            <select name="movieSort" id="movieSort" onchange="sortChange(event)">
+                <option disabled selected value="">Sort by Year</option>
+                <option value="newest">Newest to Oldest</option>
+                <option value="oldest">Oldest to Newest</option>
+            </select>
+        </div>
+    </div>
+    <section class="movies">
+        <div class="movies__loading">
+        </div>
+    </section>
+</body>
+</html>
