@@ -19,6 +19,9 @@ button {
 }
 
 body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: rgb(170, 215, 244);
 }
 
@@ -111,10 +114,10 @@ body {
 
 .search__info--btn {
   z-index: 2;
-  height: calc(100% - 16px);
+  height: calc(90% - 24px);
   border-radius: 500px;
   width: 160px;
-  border: none;
+  border: hidden;
   background-color: #2b0cf3;
   color: #eff83a;
   font-weight: 700;
@@ -139,7 +142,7 @@ body {
   border-radius: 500px;
   border: 2px solid rgb(229, 231, 235);
   padding: 20px 192px 20px 32px;
-  color: rgb(36, 62, 99);
+  color: rgb(65, 111, 174);
   font-size: 16px;
   font-weight: 500;
   top: 0;
@@ -212,21 +215,23 @@ body {
 .movies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .movie {
-  padding-top: 48px;
-  margin: 24px 12px;
+  margin-bottom: 24px;
+  margin-top: 48px;
+  animation: slideIn 3s ease-out forwards;
+  animation-duration: 1500ms ease;
+  transition-duration: 1500ms ease;
+  animation-delay: 300ms ease;
+  transition-delay: 300ms ease;
 }
 
 .movies__loading--skeleton {
-  justify-content: center;
-  align-items: center;
-  width: 25vw;
-  height: 60vh;
-  margin: 24px 24px;
+  width: calc( 90% / 3 );
+  height: 30vh;
   animation: skeleton-loading 1s linear infinite alternate;
   opacity: 0.5;
 }
