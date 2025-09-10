@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; 
 }
 
 html {
@@ -46,7 +46,6 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
-  width: auto;
   height: 200px;
   background-image: url("mountains1.jpg");
   background-repeat: no-repeat;
@@ -166,7 +165,8 @@ body {
 .search__results--wrapper {
   display: flex;
   justify-content: center;
-  padding-top: 24px;
+  align-items: center;
+  padding: 24px;
 }
 
 .section__title {

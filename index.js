@@ -23,7 +23,7 @@ async function renderMovies(searchTerm) {
    showSkeletons(6)  //SKELETON LOADING
 
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${searchTerm}&apikey=6cc6546`  //API PULL
+    `https://www.omdbapi.com/?s=${searchTerm}&apikey=6cc6546`  //API PULL
   );
 
   moviesWrapper.classList.remove('movies__loading--skeleton');  //SKELETON LOADING
