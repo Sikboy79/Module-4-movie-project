@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -86,13 +86,21 @@ body {
 }
 
 .home__link {
-  padding: 12px 12px;
   color: #2b0cf3;
   text-decoration: none;
+  border: solid 1px;
+  border-radius: 50px;
+  background-color: aliceblue;
+  margin: 5px;
+  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact--btn {
   align-content: center;
+  margin: 5px;
+  padding: 12px 12px;
   text-align: center;
   font-weight: bold;
   width: 80px;
@@ -231,7 +239,7 @@ body {
 }
 
 .movies__loading--skeleton {
-  width: calc( 90% / 3 );
+  width: calc(90% / 3);
   height: 30vh;
   animation: skeleton-loading 1s linear infinite alternate;
   opacity: 0.5;
