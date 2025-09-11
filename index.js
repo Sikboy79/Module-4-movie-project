@@ -22,7 +22,7 @@ function showSkeletons(count = 6) {
 
 //RENDERING MOVIES
 async function renderMovies(searchTerm) {
-   showSkeletons(6)  //SKELETON LOADING
+   showSkeletons(9)  //SKELETON LOADING
 
   const response = await fetch(
     `https://www.omdbapi.com/?s=${searchTerm}&apikey=6cc6546`  //API PULL
@@ -39,7 +39,7 @@ async function renderMovies(searchTerm) {
 
 function displayMovies(movieList) {
   moviesWrapper.innerHTML = movieList
-    .slice(0, 6)
+    .slice(0, 9)
     .map((movie) => {
       return `
         <div class="movie">
