@@ -1,8 +1,10 @@
 
 const moviesWrapper = document.querySelector(".movies");
 const searchName = document.querySelector(".searchName");
-
 let currentMovies = [];
+
+//LOG IN AND REGISTRATION
+
 
 function searchChange(event) {
   renderMovies(event.target.value);
@@ -17,17 +19,6 @@ function showSkeletons(count = 6) {
         moviesWrapper.appendChild(skeleton);  
     }
 }
-
-//SKELETON
-
-function getMovies() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve([
-                {currentMovies},
-            ]);
-        }), 3000}
-    )};
 
 //RENDERING MOVIES
 async function renderMovies(searchTerm) {
