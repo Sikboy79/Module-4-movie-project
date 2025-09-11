@@ -11,12 +11,23 @@ function searchChange(event) {
 
 function showSkeletons(count = 6) {
     moviesWrapper.innerHTML = "";
-    for (let i = 0; i < count; i++) {
-        const skeleton = document.createElement("div");
+    for (let i = 0; i < count; i++) {  //LOOP OVER SIX TIMES
+        const skeleton = document.createElement("div");  //CREATE DIV FOR SKELETON
         skeleton.classList.add("movie", "movies__loading--skeleton");  //SKELETON PLACEHOLDER DISPLAY
         moviesWrapper.appendChild(skeleton);  
     }
 }
+
+//SKELETON
+
+function getMovies() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+                {currentMovies},
+            ]);
+        }), 3000}
+    )};
 
 //RENDERING MOVIES
 async function renderMovies(searchTerm) {
@@ -66,13 +77,3 @@ function sortChange(event) {
   displayMovies(sortedMovies);
 }
 
-//SKELETON
-
-function getMovies() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve([
-                {currentMovies},
-            ]);
-        }), 3000}
-    )};

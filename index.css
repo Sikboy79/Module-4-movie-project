@@ -222,16 +222,16 @@ body {
 .movie {
   margin-bottom: 24px;
   margin-top: 48px;
-  animation: slideIn 3s ease-out forwards;
-  animation-duration: 1500ms ease;
-  transition-duration: 1500ms ease;
+  animation: slideIn 2s ease-out forwards;
+  animation-duration: 1100ms ease;
+  transition-duration: 1100ms ease;
   animation-delay: 300ms ease;
   transition-delay: 300ms ease;
 }
 
 .movies__loading--skeleton {
   width: calc( 90% / 3 );
-  height: 30vh;
+  height: 60vh;
   animation: skeleton-loading 1s linear infinite alternate;
   opacity: 0.5;
 }
