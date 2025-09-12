@@ -344,7 +344,7 @@ button {
 }
 
 .modal__overlay--loading {
- background-color: #ea0f0f;
+ background-color: #7330ab;
 }
 
 .modal__overlay--success {
@@ -376,7 +376,6 @@ button {
   100% {
     transform: rotate(360deg);
   }
-
 }
 
 /* SEARCH CONTENT */

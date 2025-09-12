@@ -70,22 +70,20 @@ function sortChange(event) {
 
 // TOGGLE MODAL //
 
+const click = ("email", "password")
+
 function logIn(click) {
-  click.preventDefault();
-  const loading = document.querySelector(".modal__overlay--loading");
-  const success = document.querySelector(".modal__overlay--success");
-    loading.classList += " .modal__overlay--visible";
+  const loading = document.querySelector('.modal__overlay--loading');
+  const success = document.querySelector('.modal__overlay--success');
+    loading.classList += " modal__overlay--visible";
   if (email && password || "email" && "password") {
-    loading.classList.remove(".modal__overlay--visible");
-    success.classList += " .modal__overlay--success";
+    then(() => {
+    loading.classList.remove("modal__overlay--visible");
+    success.classList += " modal__overlay--visible";
+  })
   }
-  // catch (error) {
-  //   loading.classList.remove("modal__overlay--visible");
-  //   alert(
-  //     "logIn and registration services are down, please try again soon."
-  //   );
-  // }
 }
+
 
 let isModalOpen = false;
 function toggleModal() {
