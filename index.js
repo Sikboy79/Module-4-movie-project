@@ -68,3 +68,31 @@ function sortChange(event) {
   displayMovies(sortedMovies);
 }
 
+// TOGGLE MODAL //
+
+function logIn(click) {
+  click.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+    loading.classList += " .modal__overlay--visible";
+  if (email && password || "email" && "password") {
+    loading.classList.remove(".modal__overlay--visible");
+    success.classList += " .modal__overlay--success";
+  }
+  // catch (error) {
+  //   loading.classList.remove("modal__overlay--visible");
+  //   alert(
+  //     "logIn and registration services are down, please try again soon."
+  //   );
+  // }
+}
+
+let isModalOpen = false;
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open";
+}

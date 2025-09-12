@@ -14,11 +14,11 @@
             <div class="nav__content">
                 <img class="logo" src="./co2.jpg"></img>
                 <div class="links">
-                    <a href="" class="home__link">Podcasts</a>
-                    <a href="" class="home__link">You Tube</a>
-                    <a href="" class="home__link">Streaming</a>
-                    <a href="" class="home__link">Live Events</a>
-                    <a class="contact--btn">LOG IN</a>
+                    <a href="" class="home__link btn">Podcasts</a>
+                    <a href="" class="home__link btn">You Tube</a>
+                    <a href="" class="home__link btn">Streaming</a>
+                    <a href="" class="home__link btn">Live Events</a>
+                    <a class="contact--btn btn" onclick="toggleModal(click)">LOG IN</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="search__wrapper">
             <div class="search__info">
                 <input type="text" class="search__info--input" placeholder="Title, Genres"onchange="searchChange(event)">
-                    <button class="search__info--btn">Start search</button>
+                    <button class="search__info--btn btn" onclick="toggleModal()">Start search</button>
             </div>
         </div>
         <div class="search__results--wrapper">
@@ -43,6 +43,39 @@
                 <option value="oldest">Oldest to Newest</option>
             </select>
         </div>
+        <div class="modal">
+            <div class="modal__half modal__login">Log in to find a movie.
+                <form id="input__wrapper--login" onsubmit="logIn(click)">
+                    <input type="email" class="login__info--input" placeholder="Enter E-mail">
+                    <input type="password" class="login__info--input" placeholder="Enter password">
+                    <button class="search__info--btn--login btn">Log In</button>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--success">
+                        Success!
+                        <i class="fa-solid fa-times btn"></i>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__half modal__register">Register here to find a movie.
+                <form class="input__wrapper--register">
+                    <input type="user__name" class="register__info--input" placeholder="Name">
+                    <input type="email" class="register__info--input" placeholder="E-mail">
+                    <input type="password" class="register__info--input" placeholder="Password">
+                    <input type="password" class="register__info--input" placeholder="Verify password">
+                    <button class="search__info--btn--login btn">Register</button>
+                        <div class="modal__overlay modal__overlay--loading">
+                            <i class="fa-solid fa-spinner"></i>
+                        </div>
+                        <div class="modal__overlay modal__overlay--success">
+                            Success!
+                            <i class="fa-solid fa-times btn"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <section class="movies">
         <div class="movies__loading">
@@ -50,9 +83,9 @@
     </section>
     <footer>
         <div class="footer-wrapper">
-            <a href="" class="footer__link">Contact Us</a>
+            <a href="" class="footer__link btn">Contact Us</a>
             <p>&copy</p>
-            <a href="" class="footer__link">User Agrement</a>
+            <a href="" class="footer__link btn">User Agrement</a>
         </div>
     </footer>
 </body>
