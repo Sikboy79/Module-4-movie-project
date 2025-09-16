@@ -76,10 +76,12 @@ function logIn(click) {
   const loading = document.querySelector('.modal__overlay--loading');
   const success = document.querySelector('.modal__overlay--success');
     loading.classList += " modal__overlay--visible";
-  if (email && password || "email" && "password") {
-    then(() => {
+  // if (email && password || "email" && "password") {
+  //   then(() => {
     loading.classList.remove("modal__overlay--visible");
     success.classList += " modal__overlay--visible";
+    if (email && password || "email" && "password") {
+    then(() => {
   })
   }
 }
